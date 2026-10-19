@@ -6,8 +6,8 @@
 
 ```sh
 mvn test
-mvn package
-java -jar target/hello-world-1.0.0.jar
+mvn clean package
+java -cp target/hello-world-1.0-SNAPSHOT.jar com.example.Hello
 ```
 
 Локальну CI-збірку можна запустити через `./ci.sh` на Linux/macOS або `ci.bat` на Windows. Workflow `.github/workflows/ci.yml` виконує ці ж скрипти на трьох ОС для `develop` та `master`.
@@ -27,4 +27,4 @@ Agent **Java Build & CI/CD Engineer** описує загальну роль і 
 
 ## Перевірка результату
 
-Успішна збірка створює `target/hello-world-1.0.0.jar`; запуск JAR має вивести `Hello, World!`. Maven також має показати успішний тест `BasicAddition`. `target/` і тимчасові файли IDE ігноруються Git.
+Успішна збірка створює `target/hello-world-1.0-SNAPSHOT.jar`; запуск класу з JAR має вивести `Hello, World!`. Maven також має показати успішний тест `BasicAddition`. `target/` і тимчасові файли IDE ігноруються Git.

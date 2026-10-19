@@ -20,7 +20,7 @@
 ```sh
 mvn test
 mvn package
-java -jar target/hello-world-1.0.0.jar
+java -cp target/hello-world-1.0-SNAPSHOT.jar com.example.Hello
 ```
 
 Очікуваний вивід програми:
